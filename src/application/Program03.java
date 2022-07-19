@@ -22,16 +22,16 @@ public class Program03 {
 
 		double sum = sp + rj + mg + es + outros;
 
-		System.out.println("Percentual de representação do estado de SP: " + percentual(sp, sum));
-		System.out.println("Percentual de representação do estado de RJ: " + percentual(rj, sum));
-		System.out.println("Percentual de representação do estado de MG: " + percentual(mg, sum));
-		System.out.println("Percentual de representação do estado de EP: " + percentual(es, sum));
+		System.out.println("Percentual de representação do estado de SP: " + String.format("%.2f",  percentual(sp, sum)) + "%");
+		System.out.println("Percentual de representação do estado de RJ: " + String.format("%.2f",  percentual(rj, sum)) + "%");
+		System.out.println("Percentual de representação do estado de MG: " + String.format("%.2f",  percentual(mg, sum)) + "%");
+		System.out.println("Percentual de representação do estado de EP: " + String.format("%.2f",  percentual(es, sum)) + "%");
 
 	}
 
-	public static int percentual(double estado, double sum) {
+	public static double percentual(double estado, double sum) {
 
-		return (int) (estado * 100 / sum);
+		return (estado * 100 / sum);
 	}
 
 }
